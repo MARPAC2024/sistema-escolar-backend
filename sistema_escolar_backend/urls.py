@@ -5,16 +5,20 @@ from django.conf.urls.static import static
 from .views.bootstrap import VersionView
 from sistema_escolar_backend.views import users
 from sistema_escolar_backend.views import auth
-#from app_movil_escolar_api.views import alumnos
-#from app_movil_escolar_api.views import maestros
+from sistema_escolar_backend.views import alumnos
+from sistema_escolar_backend.views import maestros
 
 urlpatterns = [
-    #Create Admin
-        path('admin/', users.AdminView.as_view()),
-    #Login
-        path('login/', auth.CustomAuthToken.as_view()),
-    #Logout
-        path('logout/', auth.Logout.as_view())
+    # Create Admin
+    path('admin/', users.AdminView.as_view()),
+    # Create Alumno
+    path('alumnos/', alumnos.AlumnosView.as_view()),
+    # Create Maestro
+    path('maestros/', maestros.MaestrosView.as_view()),
+    # Login
+    path('login/', auth.CustomAuthToken.as_view()),
+    # Logout
+    path('logout/', auth.Logout.as_view())
 ]
 
 if settings.DEBUG:
