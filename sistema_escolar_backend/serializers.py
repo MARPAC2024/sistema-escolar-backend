@@ -25,8 +25,8 @@ class MaestroSerializer(serializers.ModelSerializer):
 #TODO: Agregar serializer para alumnos
 # Definimos el serializer para alumnos
 class AlumnoSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    user=UserSerializer(read_only=True)
     class Meta:
         model = Alumnos
-        fields = '__all__'
-        
+        fields = "__all__"
+		

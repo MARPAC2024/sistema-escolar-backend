@@ -5,7 +5,7 @@ from sistema_escolar_backend.models import *
 
 @admin.register(Administradores)
 @admin.register(Maestros)
-#@admin.register(Alumnos)
+@admin.register(Alumnos)
 
 class ProfilesAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "creation", "update")
